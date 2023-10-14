@@ -18,10 +18,9 @@ def main():
 		if option=='audio':
 			video_object.streams.get_audio_only().download() 		#base64.b64encode("if file is too large").decode()	
 		elif option=='highest_resolution':
-			video_object.streams.get_highest_resolution()
-			video_object.download(download_path)
+			video_object.streams.get_highest_resolution().download()
 		elif option=='lowest_resolution':
-			video_object.streams.get_lowest_resolution()
+			video_object.streams.get_lowest_resolution().download()
 	if st.button("view"): 
 		st.video(path) 
 if __name__ == '__main__':
